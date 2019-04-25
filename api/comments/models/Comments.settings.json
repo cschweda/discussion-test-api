@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "comments",
+  "info": {
+    "name": "comments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "discussionID": {
+      "type": "string",
+      "required": true
+    },
+    "hidden": {
+      "type": "boolean",
+      "required": true
+    },
+    "user": {
+      "model": "user",
+      "via": "comments",
+      "plugin": "users-permissions"
+    }
+  }
+}
